@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/opendyslexic');
+@import 'tailwindcss';
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* Explicit pointer cursor only on clickable elements */
+button,
+[role="button"],
+a,
+select,
+summary {
+  cursor: pointer;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+/* ── Accessibility modes ── */
+.mode-dyslexic,
+.mode-dyslexic * {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', cursive !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.12em;
+  line-height: 1.8 !important;
+}
+
+.mode-large-text { font-size: 118%; }
+
+/* ── Semantic theme elements (default light) ── */
+.home-hero-bg {
+  background: linear-gradient(160deg, #f0fdf4 0%, #ecfdf5 45%, #f8fafc 100%);
+}
+.home-eu-pill {
+  background-color: #d1fae5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+.catalog-banner-section {
+  background: linear-gradient(160deg, #f0fdf4, #ecfdf5);
+}
+.partner-card {
+  background-color: rgba(248, 250, 252, 0.7);
+  border-color: rgba(226, 232, 240, 0.7);
+}
+.advice-header {
+  background: linear-gradient(90deg, rgba(236, 253, 245, 0.7), rgba(240, 253, 250, 0.4), #ffffff);
+}
+.advice-paradox-box {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.7), rgba(236, 253, 245, 0.3), #f8fafc);
+}
+.advice-takeaway {
+  background-color: rgba(254, 243, 199, 0.6);
+  border-color: rgba(253, 230, 138, 0.6);
+  color: #78350f;
+}
+.advice-tip-card {
+  background-color: rgba(236, 253, 245, 0.4);
+  border-color: rgba(167, 243, 208, 0.8);
+}
+.spec-item-row {
+  background-color: rgba(248, 250, 252, 0.85);
+  border: 1px solid #f1f5f9;
+}
+.alternatives-card {
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+}
+
+/* ── Theme: Clair Contrasté (Gris & Blancs démarqués, bordures nettes) ── */
+.theme-contrast,
+html[data-theme="contrast"],
+body.theme-contrast {
+  background-color: #cbd5e1 !important;
+  color: #020617 !important;
+}
+
+.theme-contrast .home-hero-bg {
+  background: #cbd5e1 !important;
+}
+.theme-contrast .home-eu-pill {
+  background-color: #ffffff !important;
+  color: #047857 !important;
+  border-color: #047857 !important;
+}
+.theme-contrast .catalog-banner-section {
+  background: #cbd5e1 !important;
+  border-top: 2px solid #64748b !important;
+  border-bottom: 2px solid #64748b !important;
+}
+.theme-contrast .partner-card {
+  background-color: #ffffff !important;
+  border: 1.5px solid #64748b !important;
+}
+.theme-contrast .advice-header {
+  background: #f1f5f9 !important;
+  border-bottom: 1.5px solid #64748b !important;
+}
+.theme-contrast .advice-paradox-box {
+  background: #f8fafc !important;
+  border: 1.5px solid #64748b !important;
+}
+.theme-contrast .advice-takeaway {
+  background-color: #fef3c7 !important;
+  border: 1.5px solid #d97706 !important;
+  color: #78350f !important;
+}
+.theme-contrast .advice-tip-card {
+  background-color: #ffffff !important;
+  border: 1.5px solid #64748b !important;
+}
+.theme-contrast .spec-item-row {
+  background-color: #e2e8f0 !important;
+  border: 1.5px solid #64748b !important;
+}
+.theme-contrast .alternatives-card {
+  background: #e2e8f0 !important;
+  border: 2px solid #64748b !important;
+}
+
+.theme-contrast .bg-slate-50,
+.theme-contrast [class*="bg-slate-50"] {
+  background-color: #cbd5e1 !important;
+}
+
+.theme-contrast .bg-white,
+.theme-contrast .glass {
+  background-color: #ffffff !important;
+  border-color: #64748b !important;
+  box-shadow: 0 4px 10px -2px rgba(15, 23, 42, 0.16) !important;
+}
+
+.theme-contrast [class*="bg-slate-100"] {
+  background-color: #e2e8f0 !important;
+  border-color: #64748b !important;
+}
+
+.theme-contrast [class*="border-slate-"] {
+  border-color: #64748b !important;
+}
+
+.theme-contrast .text-slate-900,
+.theme-contrast .text-slate-800 {
+  color: #020617 !important;
+}
+
+.theme-contrast .text-slate-700,
+.theme-contrast .text-slate-600 {
+  color: #0f172a !important;
+}
+
+.theme-contrast .text-slate-500,
+.theme-contrast .text-slate-400 {
+  color: #334155 !important;
+  font-weight: 500;
+}
+
+.theme-contrast header,
+.theme-contrast nav {
+  background-color: #ffffff !important;
+  border-color: #64748b !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12) !important;
+}
+
+.theme-contrast input,
+.theme-contrast select,
+.theme-contrast textarea {
+  background-color: #ffffff !important;
+  border-color: #475569 !important;
+  color: #020617 !important;
+}
+
+.theme-contrast input::placeholder,
+.theme-contrast textarea::placeholder {
+  color: #475569 !important;
+}
+
+/* ── Theme: Sombre (Mode nuit pour tout le site) ── */
+.theme-dark,
+html.dark,
+html[data-theme="dark"],
+body.theme-dark {
+  background-color: #090d16 !important;
+  color: #f8fafc !important;
+}
+
+.theme-dark .home-hero-bg {
+  background: linear-gradient(160deg, #05261b 0%, #0d1e2e 45%, #090d16 100%) !important;
+}
+.theme-dark .home-eu-pill {
+  background-color: rgba(6, 78, 59, 0.45) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+.theme-dark .catalog-banner-section {
+  background: linear-gradient(160deg, #062b1f, #0d1e2e) !important;
+  border-top: 1px solid #1e3a30 !important;
+  border-bottom: 1px solid #1e3a30 !important;
+}
+.theme-dark .partner-card {
+  background-color: #111a28 !important;
+  border-color: #223044 !important;
+}
+.theme-dark .partner-logo-wrapper {
+  background-color: #ffffff !important;
+  border-radius: 12px;
+  padding: 8px;
+}
+.theme-dark .advice-header {
+  background: linear-gradient(135deg, #072a1e, #0e2030) !important;
+  border-color: #1a332a !important;
+}
+.theme-dark .advice-paradox-box {
+  background: #0d1724 !important;
+  border-color: #243448 !important;
+}
+.theme-dark .advice-takeaway {
+  background-color: rgba(120, 53, 15, 0.35) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+  color: #fde68a !important;
+}
+.theme-dark .advice-tip-card {
+  background-color: #0f1a28 !important;
+  border-color: #1e2e42 !important;
+}
+.theme-dark .spec-item-row {
+  background-color: #0c1420 !important;
+  border: 1px solid #1f2d40 !important;
+}
+.theme-dark .alternatives-card {
+  background: linear-gradient(135deg, #08281e, #0e1e2d) !important;
+  border-color: #065f46 !important;
+}
+.theme-dark .alternatives-card-header {
+  border-color: #12382c !important;
+}
+
+.theme-dark .bg-slate-50,
+.theme-dark [class*="bg-slate-50"] {
+  background-color: #0c1420 !important;
+}
+
+.theme-dark .bg-white,
+.theme-dark .glass {
+  background-color: #131c2e !important;
+  border-color: #243247 !important;
+  color: #f8fafc !important;
+}
+
+.theme-dark [class*="bg-slate-100"] {
+  background-color: #0f172a !important;
+  border-color: #243247 !important;
+}
+
+.theme-dark .bg-slate-200 {
+  background-color: #2a374d !important;
+}
+
+.theme-dark [class*="border-slate-"] {
+  border-color: #243247 !important;
+}
+
+.theme-dark .text-slate-900,
+.theme-dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+.theme-dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.theme-dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.theme-dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.theme-dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+.theme-dark header,
+.theme-dark nav {
+  background-color: rgba(15, 23, 42, 0.96) !important;
+  border-color: #1e293b !important;
+}
+
+.theme-dark header img,
+.theme-dark .login-logo,
+html.dark .login-logo {
+  filter: brightness(0) invert(1) !important;
+}
+
+.theme-dark header button {
+  color: #cbd5e1;
+}
+.theme-dark header button:hover {
+  color: #34d399;
+}
+
+.theme-dark input,
+.theme-dark select,
+.theme-dark textarea {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+.theme-dark select option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+.theme-dark [class*="bg-emerald-50"],
+.theme-dark [class*="bg-emerald-100"] {
+  background-color: rgba(6, 78, 59, 0.4) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+
+.theme-dark [class*="border-emerald-100"],
+.theme-dark [class*="border-emerald-200"],
+.theme-dark [class*="border-emerald-300"] {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.theme-dark [class*="text-emerald-7"],
+.theme-dark [class*="text-emerald-8"],
+.theme-dark [class*="text-emerald-9"],
+.theme-dark [class*="text-emerald-950"] {
+  color: #34d399 !important;
+}
+
+.theme-dark .text-emerald-600 {
+  color: #10b981 !important;
+}
+
+.theme-dark [class*="bg-teal-50"],
+.theme-dark [class*="bg-teal-100"] {
+  background-color: rgba(19, 78, 74, 0.4) !important;
+  border-color: rgba(20, 184, 166, 0.35) !important;
+}
+
+.theme-dark .text-teal-700,
+.theme-dark .text-teal-800 {
+  color: #2dd4bf !important;
+}
+
+.theme-dark [class*="bg-amber-50"],
+.theme-dark [class*="bg-amber-100"] {
+  background-color: rgba(120, 53, 15, 0.4) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+.theme-dark .text-amber-700,
+.theme-dark .text-amber-800 {
+  color: #fbbf24 !important;
+}
+
+.theme-dark [class*="bg-blue-50"],
+.theme-dark [class*="bg-blue-100"] {
+  background-color: rgba(30, 58, 138, 0.4) !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+.theme-dark .text-blue-700,
+.theme-dark .text-blue-800 {
+  color: #60a5fa !important;
+}
+
+.theme-dark [class*="bg-red-50"],
+.theme-dark [class*="bg-red-100"],
+.theme-dark [class*="bg-rose-50"],
+.theme-dark [class*="bg-rose-100"] {
+  background-color: rgba(127, 29, 29, 0.4) !important;
+  border-color: rgba(239, 68, 68, 0.35) !important;
+}
+
+.theme-dark .text-red-700,
+.theme-dark .text-red-800,
+.theme-dark .text-red-600,
+.theme-dark .text-rose-600,
+.theme-dark .text-rose-700 {
+  color: #f87171 !important;
+}
+
+/* Ensure QR code stays black on white for mobile camera scanning */
+.theme-dark .qr-code-box,
+html.dark .qr-code-box {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.theme-dark .qr-code-box svg path,
+html.dark .qr-code-box svg path {
+  fill: #0f172a !important;
+}
+
+.theme-dark * {
+  scrollbar-color: #10b981 #0f172a;
+}
+
+/* ── Scrollbars ── */
+* { scrollbar-width: thin; scrollbar-color: #047857 transparent; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #047857; border-radius: 4px; }
+
+/* ── Print shelf tag ── */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white; }
+}
+.print-only { display: none; }
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-fade-in  { animation: fadeIn  0.35s ease both; }
+.animate-slide-up { animation: slideUp 0.45s ease both; }
+.animate-scale-in { animation: scaleIn 0.25s ease both; }
+
+/* ── EU energy label arrow shape ── */
+.energy-arrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 28px 0 10px;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
+}
+
+/* ── Score bar transition ── */
+.bar-fill { transition: width 0.9s cubic-bezier(0.22,1,0.36,1); }
+
+/* ── Glass card ── */
+.glass {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(4,120,87,0.12);
+}

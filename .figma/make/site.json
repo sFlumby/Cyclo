@@ -1,0 +1,10 @@
+{
+  "description": "EcoAppareil enables consumers and retailers to analyze and compare the environmental impact of home appliances, ensuring informed eco-friendly purchasing decisions.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
