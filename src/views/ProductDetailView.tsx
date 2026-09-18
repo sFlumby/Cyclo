@@ -349,74 +349,69 @@ export function ProductDetailView({
       </div>
 
       {/* Sélecteur de mode : Vue consommateur / Vue partenaire */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 bg-white p-2.5 sm:p-3 rounded-2xl border border-slate-200/80 shadow-2xs">
-        <div className="flex p-1 bg-slate-100/90 rounded-xl border border-slate-200/60 w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-8 bg-white p-2.5 sm:p-3 rounded-2xl border border-slate-200/80 shadow-2xs">
+        <div className="grid grid-cols-2 gap-1 p-1 bg-slate-100/90 rounded-xl border border-slate-200/60 w-full sm:w-auto sm:flex sm:items-center">
           <button
             type="button"
             onClick={() => setViewMode("client")}
-            className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`w-full sm:w-auto flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer select-none ${
               viewMode === "client"
                 ? "bg-white text-emerald-800 shadow-xs border border-slate-200/60"
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
             <User
-              className={`w-4 h-4 ${
+              className={`w-4 h-4 flex-shrink-0 ${
                 viewMode === "client" ? "text-emerald-700" : "text-slate-400"
               }`}
             />
-            <span>Vue consommateur</span>
-            <span
-              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
-                viewMode === "client"
-                  ? "bg-emerald-50 text-emerald-700 border border-emerald-200/60"
-                  : "bg-slate-200/60 text-slate-500"
-              }`}
-            >
-              Consommateur
+            <span className="truncate">
+              <span className="hidden sm:inline">Vue </span>Consommateur
             </span>
           </button>
 
           <button
             type="button"
             onClick={() => setViewMode("pro")}
-            className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`w-full sm:w-auto flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer select-none ${
               viewMode === "pro"
                 ? "bg-emerald-800 text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
             <Store
-              className={`w-4 h-4 ${
+              className={`w-4 h-4 flex-shrink-0 ${
                 viewMode === "pro" ? "text-emerald-200" : "text-slate-400"
               }`}
             />
-            <span>Vue partenaire</span>
+            <span className="truncate">
+              <span className="hidden sm:inline">Vue </span>Partenaire
+            </span>
             <span
-              className={`text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full ${
+              className={`text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider px-1.5 sm:px-2 py-0.5 rounded-full flex-shrink-0 ${
                 viewMode === "pro"
                   ? "bg-emerald-950/80 text-emerald-200 border border-emerald-600/50"
                   : "bg-slate-200/60 text-slate-500"
               }`}
             >
-              B2B / Magasins
+              B2B<span className="hidden md:inline"> / Magasins</span>
             </span>
           </button>
         </div>
 
-        <div className="text-xs text-slate-500 flex items-center gap-2 px-2">
+        <div className="text-xs text-slate-500 flex items-start sm:items-center gap-2 px-1 sm:px-2">
           {viewMode === "client" ? (
-            <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
+            <span className="flex items-start sm:items-center gap-1.5 leading-snug sm:leading-normal">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0 mt-1 sm:mt-0" />
               <span>
-                Vue consommateur : Analyse d'usage, décryptage des notes & conseils durables
+                <strong>Vue consommateur :</strong> Analyse d'usage, décryptage des notes & conseils durables
               </span>
             </span>
           ) : (
-            <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-teal-500 flex-shrink-0" />
+            <span className="flex items-start sm:items-center gap-1.5 leading-snug sm:leading-normal">
+              <span className="w-2 h-2 rounded-full bg-teal-500 flex-shrink-0 mt-1 sm:mt-0" />
               <span>
-                Vue partenaire : Outils de vente en rayon, fiches étiquettes & conformité juridique
+                <strong>Vue partenaire :</strong> Outils de vente en rayon, fiches étiquettes & conformité juridique
               </span>
             </span>
           )}
