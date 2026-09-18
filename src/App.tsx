@@ -228,7 +228,7 @@ export default function App() {
         onPreview={() => setView("preview")}
       />
 
-      <main className="pb-16 sm:pb-0">
+      <main className="pb-28 sm:pb-0">
         {view === "home" && (
           <ErrorBoundary fallbackTitle="Erreur lors de l'affichage de l'accueil">
             <HomeView

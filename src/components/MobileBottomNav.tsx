@@ -85,21 +85,24 @@ export function MobileBottomNav({
     <nav
       aria-label="Navigation principale mobile"
       className="fixed bottom-0 left-0 right-0 z-30 sm:hidden bg-white/95 backdrop-blur border-t border-slate-100 shadow-lg no-print"
+      style={{
+        paddingBottom: "max(1.25rem, env(safe-area-inset-bottom, 22px))",
+      }}
     >
-      <div className="flex items-stretch justify-around px-2">
+      <div className="flex items-stretch justify-around px-2 pt-2 pb-1">
         {items.map((item) => (
           <button
             key={item.label}
             onClick={item.action}
             aria-current={item.active ? "page" : undefined}
-            className="flex-1 flex flex-col items-center justify-center py-2 gap-1 transition-all duration-150 relative"
+            className="flex-1 flex flex-col items-center justify-center py-1.5 gap-1 transition-all duration-150 relative"
             style={{
               color: item.primary || item.active ? "#047857" : "#94a3b8",
             }}
           >
             {item.primary ? (
               <div
-                className="w-12 h-12 -mt-5 rounded-full flex items-center justify-center shadow-lg transition-transform duration-150 active:scale-95 border-4 border-white"
+                className="w-12 h-12 -mt-6 rounded-full flex items-center justify-center shadow-lg transition-transform duration-150 active:scale-95 border-4 border-white"
                 style={{
                   background: item.active
                     ? "linear-gradient(135deg, #047857, #065f46)"
@@ -125,7 +128,6 @@ export function MobileBottomNav({
           </button>
         ))}
       </div>
-      <div className="h-safe-area-inset-bottom" />
     </nav>
   )
 }
