@@ -1,5 +1,5 @@
 import React from "react"
-import logoCyclo from "@/imports/Logo_Cyclo_Banière.png"
+import logoCyclo from "@/imports/Logo_Cyclo_Baniere.png"
 import { Leaf } from "lucide-react"
 
 export function Footer() {

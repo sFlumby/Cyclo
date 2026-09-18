@@ -25,7 +25,7 @@ import {
   Accessibility,
 } from "lucide-react"
 import logoCycloIcon from "@/imports/Logo_Cyclo_Haut_Page.png"
-import logoCyclo from "@/imports/Logo_Cyclo_Banière.png"
+import logoCyclo from "@/imports/Logo_Cyclo_Baniere.png"
 
 export type TagFormat = "a6" | "a5" | "strip"
 export type StyleTheme = "standard" | "light" | "eco" | "dark"

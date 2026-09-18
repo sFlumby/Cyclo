@@ -20,7 +20,7 @@ import {
   ChevronDown,
   Tv,
 } from "lucide-react"
-import logoCyclo from "@/imports/Logo_Cyclo_Banière.png"
+import logoCyclo from "@/imports/Logo_Cyclo_Baniere.png"
 import logoCycloIcon from "@/imports/Logo_Cyclo_Haut_Page.png"
 
 function MiniProductCard({

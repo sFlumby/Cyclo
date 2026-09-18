@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { type LoginTab } from "@/lib/utils"
-import logoCyclo from "@/imports/Logo_Cyclo_Banière.png"
+import logoCyclo from "@/imports/Logo_Cyclo_Baniere.png"
 import { User, Store, X } from "lucide-react"
 
 export interface LoginModalProps {

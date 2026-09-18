@@ -13,7 +13,7 @@ import {
   ShieldCheck,
   Package,
 } from "lucide-react"
-import logoCyclo from "@/imports/Logo_Cyclo_Banière.png"
+import logoCyclo from "@/imports/Logo_Cyclo_Baniere.png"
 import logoFnac from "@/imports/Logo_Fnac.png"
 import logoBoulanger from "@/imports/Logo_Boulanger.png"
 import logoIfixit from "@/imports/Logo_iFixit.png"

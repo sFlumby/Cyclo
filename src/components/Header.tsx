@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { type View, type LoginTab } from "@/lib/utils"
 import { Accessibility } from "lucide-react"
-import logoCyclo from "@/imports/Logo_Cyclo_Banière.png"
+import logoCyclo from "@/imports/Logo_Cyclo_Baniere.png"
 
 export function Header({
   view,
